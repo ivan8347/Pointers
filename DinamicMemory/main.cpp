@@ -7,7 +7,7 @@ void Pop_back(int*& arr,  int& n);
 void Pop_front(int*& arr,  int& n);
 int* Push_front(int arr[], int& n, const int value);
 void Erase(int*& arr, int& n, const int value);
-int* Push(int arr[], int& n, const int value, const int tab);
+int* Insert(int arr[], int& n, const int value, const int tab);
 
 
 void main()
@@ -66,7 +66,7 @@ void main()
 
 	cout << "¬ведите индекс добавленного элемента массива: "; cin >> value;
 	cout << "¬ведите значение добавленного элемента массива: "; cin >> tab;
-	arr = Push(arr, n, value, tab);
+	arr = Insert(arr, n, value, tab);
 	Print(arr, n);
 
 
@@ -158,7 +158,7 @@ int* Push_front(int arr[], int& n, const int value)
 
 
 }
-int* Push(int arr[], int& n, const int value, const int tab)
+int* Insert(int arr[], int& n, const int value, const int tab)
 {
 	int* buffer = new int[n];
 	for (int i = 0; i < value; i++)
