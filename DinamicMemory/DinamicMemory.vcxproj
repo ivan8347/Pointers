@@ -127,7 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Erase.cpp" />
+    <ClCompile Include="FILLRand.cpp" />
+    <ClCompile Include="Insert.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pop.cpp" />
+    <ClCompile Include="Print.cpp" />
+    <ClCompile Include="Push.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="Erase.h" />
+    <ClInclude Include="FILLRand.h" />
+    <ClInclude Include="Insert.h" />
+    <ClInclude Include="Pop.h" />
+    <ClInclude Include="Push.h" />
+    <ClInclude Include="Print.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
