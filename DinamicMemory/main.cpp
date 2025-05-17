@@ -38,8 +38,8 @@ void Erase_col(int**& arr, const int rows, int& cols, const int index);
 
 void Clear(int** arr, const int rows, const int cols);
 
-#define DYNAMIC_MEMORY_1
-//#define DYNAMIC_MEMORY_2
+//#define DYNAMIC_MEMORY_1
+#define DYNAMIC_MEMORY_2
 
 
 void main()
@@ -121,18 +121,18 @@ void main()
 	//	arr[i] = new int [cols];
 	//}
 
-	int** brr = new int* [rows];
-	Allocate(brr, rows, cols);
+	int** arr = new int* [rows];
+	Allocate(arr, rows, cols);
 
-	FillRand(brr, rows, cols);
-	Print(brr, rows, cols);
+	FillRand(arr, rows, cols);
+	Print(arr, rows, cols);
 	cout << "Добавление строки в конце массива :" << endl;
-	brr = Push_row_back(brr, rows, cols);
-	Print(brr, rows, cols);
+	arr = Push_row_back(arr, rows, cols);
+	Print(arr, rows, cols);
 
 	cout << "Добавление строки в начале массива :" << endl;
-	brr = Push_row_front(brr, rows, cols);
-	Print(brr, rows, cols);
+	arr = Push_row_front(arr, rows, cols);
+	Print(arr, rows, cols);
 
 	cout << "Введите индекс добавленной строки массива: "; cin >> index;
 	arr = Insert_row(arr, rows, cols, index);
@@ -143,16 +143,16 @@ void main()
 	Print(arr, rows, cols);
 
 	cout << "Добавление столбца в начале массива :" << endl;
-	brr = Push_col_front(brr, rows, cols);
-	Print(brr, rows, cols);
+	arr = Push_col_front(arr, rows, cols);
+	Print(arr, rows, cols);
 
 	cout << "Введите индекс добавленного столбца массива: "; cin >> index;
 	arr = Insert_col(arr, rows, cols, index);
 	Print(arr, rows, cols);
 
 	cout << "Удаление последней строки массива: " << endl;
-	brr = Pop_row_back(brr, rows, cols);
-	Print(brr, rows, cols);
+	arr = Pop_row_back(arr, rows, cols);
+	Print(arr, rows, cols);
 
 	cout << "Удаление последнего столбца массива: " << endl;
 	Pop_col_back(arr, rows, cols);
