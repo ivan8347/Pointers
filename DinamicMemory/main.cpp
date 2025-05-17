@@ -14,7 +14,7 @@ using namespace std;
 
 #define DYNAMIC_MEMORY_1
 //#define DYNAMIC_MEMORY_2
-
+//#define DEBUG
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -24,35 +24,30 @@ void main()
 	double* arr = new double[n];
 	FillRand(arr, n);
 	Print(arr, n);
-	/*cout << arr << endl;
-	cout << *arr << endl;
-
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr + i << "\t";
-	}
-	cout << endl;*/
+	
 	double value;
 	int index;
 	cout << "Введите добавленное значение в конце массива: "; cin >> value;
-	//1.создаём буферный массив
+	
 	arr = Push_back(arr, n, value);
-	//#ifdef DEBUG
-//	//2.копируем всё содержимое исходного в буфер
-//for (int i = 0; i < n; i++)
-//{
-//	buffer [i] = arr[i];
-//}
-// 	   //3.удаляем исходный массив
-//   delete[] arr;
-//  //4.подменяем адресс в указателе "arr" указателем нового массива
-//arr =  buffer;
-////5.только после этого в массиве появляется элимент 
-//arr[n] = value;
-////6.как в массив добавился элимент кол-во элементов увеличивается на один
-//n++;  
-//#endif // DEBUG
 	Print(arr, n);
+
+#ifdef DEBUG	
+	//1.создаём буферный массив
+	int* buffer = new int [n]
+    for (int i = 0; i < n; i++)//2.копируем всё содержимое исходного в буфер
+{
+	buffer [i] = arr[i];
+}
+ 	   
+   delete[] arr;//3.удаляем исходный массив
+  
+arr =  buffer;//4.подменяем адресс в указателе "arr" указателем нового массива
+//5.только после этого в массиве появляется элимент 
+arr[n] = value;
+//6.как в массив добавился элимент кол-во элементов увеличивается на один
+n++;  
+#endif // DEBUG
 
 	cout << "Удаление последнего элемента массива: " << endl;
 	Pop_back(arr, n);
@@ -74,8 +69,6 @@ void main()
 	cout << "Введите значение добавленного элемента массива: "; cin >> value;
 	arr = Insert(arr, n, value, index);
 	Print(arr, n);
-
-
 	delete[] arr;
 
 #endif // DYNAMIC_MEMORY_1
