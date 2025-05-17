@@ -134,16 +134,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Allocate.h" />
-    <ClInclude Include="constants.h" />
-    <ClInclude Include="Erase.h" />
+    <ClInclude Include="Array.h" />
+    <ClInclude Include="Delimetr.h" />
     <ClInclude Include="FillRand.h" />
     <ClInclude Include="Clear.h" />
-    <ClInclude Include="Insert.h" />
-    <ClInclude Include="Pop_back.h" />
-    <ClInclude Include="Pop_front.h" />
-    <ClInclude Include="Print.h" />
-    <ClInclude Include="Push_back.h" />
-    <ClInclude Include="Push_front.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

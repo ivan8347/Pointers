@@ -1,19 +1,13 @@
 #include"stdafx.h"
-#include"constants.h"
 #include"Allocate.h"
 #include"FillRand.h"
-#include"Print.h"
-#include"Push_back.h"
-#include"Push_front.h"
-#include"Insert.h"
-#include"Pop_back.h"
-#include"Pop_front.h"
-#include"Erase.h"
+#include"Array.h"
+#include"Delimetr.h"
 #include"Clear.h"
 using namespace std;
 
-#define DYNAMIC_MEMORY_1
-//#define DYNAMIC_MEMORY_2
+//#define DYNAMIC_MEMORY_1
+#define DYNAMIC_MEMORY_2
 //#define DEBUG
 void main()
 {
