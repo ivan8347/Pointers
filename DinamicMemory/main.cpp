@@ -121,18 +121,18 @@ void main()
 	//	arr[i] = new int [cols];
 	//}
 
-	int** arr = new int* [rows];
-	Allocate(arr, rows, cols);
+	int** brr = new int* [rows];
+	Allocate(brr, rows, cols);
 
-	FillRand(arr, rows, cols);
-	Print(arr, rows, cols);
+	FillRand(brr, rows, cols);
+	Print(brr, rows, cols);
 	cout << "Добавление строки в конце массива :" << endl;
-	arr = Push_row_back(arr, rows, cols);
-	Print(arr, rows, cols);
+	brr = Push_row_back(brr, rows, cols);
+	Print(brr, rows, cols);
 
 	cout << "Добавление строки в начале массива :" << endl;
-	arr = Push_row_front(arr, rows, cols);
-	Print(arr, rows, cols);
+	brr = Push_row_front(brr, rows, cols);
+	Print(brr, rows, cols);
 
 	cout << "Введите индекс добавленной строки массива: "; cin >> index;
 	arr = Insert_row(arr, rows, cols, index);
@@ -143,16 +143,16 @@ void main()
 	Print(arr, rows, cols);
 
 	cout << "Добавление столбца в начале массива :" << endl;
-	arr = Push_col_front(arr, rows, cols);
-	Print(arr, rows, cols);
+	brr = Push_col_front(brr, rows, cols);
+	Print(brr, rows, cols);
 
 	cout << "Введите индекс добавленного столбца массива: "; cin >> index;
 	arr = Insert_col(arr, rows, cols, index);
 	Print(arr, rows, cols);
 
 	cout << "Удаление последней строки массива: " << endl;
-	arr = Pop_row_back(arr, rows, cols);
-	Print(arr, rows, cols);
+	brr = Pop_row_back(brr, rows, cols);
+	Print(brr, rows, cols);
 
 	cout << "Удаление последнего столбца массива: " << endl;
 	Pop_col_back(arr, rows, cols);
