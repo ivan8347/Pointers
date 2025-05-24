@@ -12,8 +12,8 @@
 #include"Clear.h"
 using namespace std;
 
-#define DYNAMIC_MEMORY_1
-//#define DYNAMIC_MEMORY_2
+//#define DYNAMIC_MEMORY_1
+#define DYNAMIC_MEMORY_2
 //#define DEBUG
 void main()
 {
@@ -32,7 +32,7 @@ void main()
 	arr = Push_back(arr, n, value);
 	Print(arr, n);
 
-#ifdef DEBUG	
+ #ifdef DEBUG	
 	//1.создаём буферный массив
 	int* buffer = new int [n]
     for (int i = 0; i < n; i++)//2.копируем всё содержимое исходного в буфер
@@ -79,13 +79,7 @@ n++;
 
 	cout << "Введите количество строк : "; cin >> rows;
 	cout << "Введите количество элементов строки : "; cin >> cols;
-	//1. Создаем массив указателей
-	//2 выделяем память под строки массива
-	//for (int i = 0; i < rows; i++)
-	//{
-	//	arr[i] = new int [cols];
-	//}
-
+	
 	int** arr = new int* [rows];
 	Allocate(arr, rows, cols);
 
@@ -138,13 +132,6 @@ n++;
 	cout << "Введите индекс удаляемого столбца массива: "; cin >> index;
 	Erase_col(arr, rows, cols, index);
 	Print(arr, rows, cols);
-	////3.удаляем стороки
-	//for (int i = 0; i < rows; i++)
-	//{
-	//	delete[] arr[i];
-	//}
-	////4. удаляем массив указателей
-	//delete[]arr;
 
 	Clear(arr, rows, cols);
 
